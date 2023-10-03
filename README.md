@@ -14,7 +14,7 @@ Module 2 Challenge
     Dim curSheet As Worksheet
     
     ' Loop through all worksheets
-For Each curSheet In ThisWorkbook.Worksheets
+    For Each curSheet In ThisWorkbook.Worksheets
     curSheet.Cells(1, 9).Value = "Ticker"
     curSheet.Cells(1, 10).Value = "Yearly Change "
     curSheet.Cells(1, 11).Value = "Percent Change "
@@ -51,9 +51,9 @@ For Each curSheet In ThisWorkbook.Worksheets
         
     End If
 
-Next i
+    Next i
 
- ' Apply formatting to Yearly Change column
+     ' Apply formatting to Yearly Change column
     For j = 2 To lastRow
         If curSheet.Cells(j, 10).Value > 0 Then
             curSheet.Cells(j, 10).Interior.ColorIndex = 4
@@ -62,11 +62,11 @@ Next i
         End If
     Next j
 
-Cells(1, 16).Value = "Ticker"
-Cells(1, 17).Value = "Value"
-Cells(2, 15).Value = "Greatest % Increase"
-Cells(3, 15).Value = "Greatest % Decrease"
-Cells(4, 15).Value = "Greatest Total Volume"
+    Cells(1, 16).Value = "Ticker"
+    Cells(1, 17).Value = "Value"
+    Cells(2, 15).Value = "Greatest % Increase"
+    Cells(3, 15).Value = "Greatest % Decrease"
+    Cells(4, 15).Value = "Greatest Total Volume"
 
     ' Find and display greatest increase, decrease, and total volume
     greatest_increase = Application.WorksheetFunction.Max(curSheet.Range("K2:K" & lastRow))
@@ -81,7 +81,7 @@ Cells(4, 15).Value = "Greatest Total Volume"
 
     curSheet.Cells(4, 17).Value = greatest_TotalVolume
     curSheet.Cells(4, 16).Value = curSheet.Cells(Application.WorksheetFunction.Match(greatest_TotalVolume, curSheet.Range("L2:L" & lastRow), 0) + 1, 9).Value
-Next curSheet
+    Next curSheet
         
     
 
