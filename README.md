@@ -2,7 +2,7 @@
 Module 2 Challenge
 
 
-Sub alphabetical_testing()
+    Sub alphabetical_testing()
 
     Dim currentName As String
     Dim nextName As String
@@ -85,4 +85,4 @@ Next curSheet
         
     
 
-End Sub
+    End Sub
