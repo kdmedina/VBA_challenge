@@ -25,7 +25,7 @@ Module 2 Challenge
         
     openPrice = curSheet.Cells(2, 3).Value
     
-    lastRow = Cells(Rows.Count, 1).End(xlUp).Row
+    lastRow = curSheet.Cells(Rows.Count, 1).End(xlUp).Row
     
     For i = 2 To lastRow
         
